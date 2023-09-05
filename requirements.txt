@@ -1,4 +1,5 @@
-pytest==7.4.0
+pytest==7.4.1
+#pytest==5.4.3
 webdriver-manager
 pytest-html
 pytest-xdist
