@@ -8,6 +8,7 @@ Setup & configure WebDriver in Pycharm
 Pre-requisites:
 ----------
   Python
+  
   Pychamp
 
 1) Download browser specific drivers using below links....	
