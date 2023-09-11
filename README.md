@@ -35,4 +35,6 @@ Pre-requisites:
 
     Open a terminal
 
+    pytest -s -v --html=report.html ..\test_CommandLine2.py --browser chrome
+
 
