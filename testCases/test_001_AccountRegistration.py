@@ -5,13 +5,14 @@ import os
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
 import time
-
+import pytest
 
 class Test_001_AccountReg:
     #baseURL = "https://demo.opencart.com/"
     baseURL = ReadConfig.getApplicationURL()
     logger = LogGen.loggen()  # for logging
 
+    @pytest.mark.regression
     def test_account_reg(self, setup):
         self.logger.info("**** test_001_AccountRegistration started *** ")
         self.driver = setup
