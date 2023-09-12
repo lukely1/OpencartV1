@@ -37,6 +37,6 @@ Pre-requisites:
 
     Open a terminal
 
-    pytest -s -v ..\test_001_AccountRegistration.py --browser chrome
+    pytest -s -v --capture=tee-sys .\test_001_AccountRegistration.py --browser chrome
 
 
