@@ -2,13 +2,14 @@ from pageObjects.HomePage import HomePage
 from pageObjects.AccountRegistrationPage import AccountRegistrationPage
 from utilities import randomeString
 import os
-# from utilities.readProperties import ReadConfig
+from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
+import time
 
 
 class Test_001_AccountReg:
-    baseURL = "https://demo.opencart.com/"
-    #baseURL = ReadConfig.getApplicationURL()
+    #baseURL = "https://demo.opencart.com/"
+    baseURL = ReadConfig.getApplicationURL()
     logger = LogGen.loggen()  # for logging
 
     def test_account_reg(self, setup):
@@ -19,7 +20,7 @@ class Test_001_AccountReg:
         self.driver.maximize_window()
 
         self.hp = HomePage(self.driver)
-        #self.logger.info("clicking on MyAccount--> register")
+        # self.logger.info("clicking on MyAccount--> register")
         self.hp.clickMyAccount()
         self.hp.clickRegister()
 
@@ -27,9 +28,10 @@ class Test_001_AccountReg:
         self.regpage = AccountRegistrationPage(self.driver)
         self.regpage.setFirstName("John")
         self.regpage.setLastName("Canedy")
-        #self.email = randomeString.random_string_generator() + '@gmail.com'
-        #self.regpage.setEmail(self.email)
-        self.regpage.setEmail("abc09517@gmail")
+        time.sleep(2)
+        self.email = randomeString.random_string_generator() + '@gmail.com'
+        self.regpage.setEmail(self.email)
+        # self.regpage.setEmail("abc09517@gmail")
         # self.regpage.setTelephone("65656565")
         self.regpage.setPassword("abcxyz")
         # self.regpage.setConfirmPassword("abcxyz")
