@@ -3,6 +3,7 @@ pytest==7.4.1
 webdriver-manager
 pytest-html
 pytest-xdist
-openpyxl
+openpyxl~=3.1.2
 allure-pytest
-selenium
+selenium~=4.12.0
+#PyVirtualDisplay~=3.0

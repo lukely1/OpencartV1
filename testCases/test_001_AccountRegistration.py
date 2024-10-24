@@ -22,18 +22,20 @@ class Test_001_AccountReg:
 
         self.hp = HomePage(self.driver)
         # self.logger.info("clicking on MyAccount--> register")
-        self.hp.clickMyAccount()
-        self.hp.clickRegister()
+        self.hp.clickShopping()
+        self.hp.clickMyAccountRegister()
+        # self.hp.clickRegister()
+
 
         self.logger.info("Proving customer details for registration")
         self.regpage = AccountRegistrationPage(self.driver)
-        self.regpage.setFirstName("John")
-        self.regpage.setLastName("Canedy")
+        self.regpage.setFirstName("Luke")
+        self.regpage.setLastName("Ly")
         time.sleep(2)
-        self.email = randomeString.random_string_generator() + '@gmail.com'
-        self.regpage.setEmail(self.email)
-        # self.regpage.setEmail("abc09517@gmail")
-        # self.regpage.setTelephone("65656565")
+        # self.email = randomeString.random_string_generator() + '@gmail.com'
+        # self.regpage.setEmail(self.email)
+        self.regpage.setEmail("lukely71@gmail")
+        # self.regpage.setTelephone("7136718290")
         self.regpage.setPassword("abcxyz")
         # self.regpage.setConfirmPassword("abcxyz")
         self.regpage.setPrivacyPolicy()
