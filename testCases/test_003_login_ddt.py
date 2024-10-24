@@ -28,15 +28,18 @@ class Test_Login_DDT():
         self.ma = MyAccountPage(self.driver)  # MyAccount Page Object class
 
         for r in range(2, self.rows + 1):
-            self.hp.clickMyAccount()
-            self.hp.clickLogin()
+            # self.hp.clickMyAccount()
+            # self.hp.clickLogin()
+            self.hp.clickShopping()
+            self.hp.clickMyAccountLogin()
 
             self.email = XLUtils.readData(self.path, "Sheet1", r, 1)
             self.password = XLUtils.readData(self.path, "Sheet1", r, 2)
             self.exp = XLUtils.readData(self.path, "Sheet1", r, 3)
             self.lp.setEmail(self.email)
             self.lp.setPassword(self.password)
-            self.lp.clickLogin()
+            self.lp.clickLoginButton()
+            # self.hp.clickLogin()
             time.sleep(3)
             self.targetpage = self.lp.isMyAccountPageExists()
 
